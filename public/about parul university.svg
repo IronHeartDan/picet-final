@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="696" height="717.5" viewBox="0 0 696 717.5">
+  <defs>
+    <filter id="A_Vibrant_University_Experience" x="0" y="0" width="696" height="221" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feFlood flood-opacity="0.439"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="about_parul_university_" data-name="about parul university " transform="translate(-1075.5 -236.5)">
+    <g id="Group_4054" data-name="Group 4054" transform="translate(10 -6)">
+      <g transform="matrix(1, 0, 0, 1, 1065.5, 242.5)" filter="url(#A_Vibrant_University_Experience)">
+        <text id="A_Vibrant_University_Experience-2" data-name="A Vibrant University 
+Experience" transform="translate(11.5 90.5)" fill="#faed25" font-size="82" font-family="Impact"><tspan x="0" y="0">A Vibrant University </tspan><tspan x="0" y="100">Experience</tspan></text>
+      </g>
+      <text id="A_state_of_the_art_campus_situated_in_Gujarat_s_cultural_capital_Vadodara._From_the_date_of_its_inception_in_1993_to_the_point_of_its_recognition_as_Parul_University_in_the_year_2015_the_University_has_grown_into_one_of_India_s_leading_academic_In" data-name="A state of the art campus, situated in Gujarat’s 
+cultural capital, Vadodara. From the date of its 
+inception in 1993, to the point of its recognition 
+as Parul University in the year 2015, the University 
+has grown into one of India’s leading academic 
+In" transform="translate(1077 519)" fill="#fff" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">A State Of The Art Campus, Situated In Gujarat’s </tspan><tspan x="0" y="37">Cultural Capital, Vadodara. From The Date Of Its </tspan><tspan x="0" y="74">Inception In 1993, To The Point Of Its Recognition </tspan><tspan x="0" y="111">As Parul University In The Year 2015, The University </tspan><tspan x="0" y="148">Has Grown Into One Of India’s Leading Academic </tspan><tspan x="0" y="185">Institutions. Parul University Is An Embodiment Of </tspan><tspan x="0" y="222">The Essence Of Cultural Heritage And Diversity With </tspan><tspan x="0" y="259">A Blend Of 21St Century Modernity. The University Is </tspan><tspan x="0" y="296">An Amalgamation Of 20 Faculties And 36 Institutes, </tspan><tspan x="0" y="333">With A Plethora Of Diploma, Undergraduate And </tspan><tspan x="0" y="370">Post Graduate Programs In Numerous Disciplines.</tspan></text>
+      <text id="www.paruluniversity.ac.in" transform="translate(1077 948)" fill="#fff" font-size="43" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">www.paruluniversity.ac.in</tspan></text>
+    </g>
+    <line id="Line_94" data-name="Line 94" x2="180" transform="translate(1087.5 460.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+  </g>
+</svg>

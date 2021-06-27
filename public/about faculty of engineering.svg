@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="747.5" height="676.5" viewBox="0 0 747.5 676.5">
+  <defs>
+    <filter id="About_Faculty_of_Engineering" x="0" y="0" width="705" height="205" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3.5" result="blur"/>
+      <feFlood flood-opacity="0.439"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="about_faculty_of_engineering-2" data-name="about faculty of engineering" transform="translate(-1075.5 -236.5)">
+    <g id="Group_4054" data-name="Group 4054" transform="translate(10 -6)">
+      <g transform="matrix(1, 0, 0, 1, 1065.5, 242.5)" filter="url(#About_Faculty_of_Engineering)">
+        <text id="About_Faculty_of_Engineering-3" data-name="About
+Faculty of Engineering" transform="translate(11.5 83.5)" fill="#faed25" font-size="75" font-family="Impact"><tspan x="0" y="0">About</tspan><tspan x="0" y="92">Faculty Of Engineering</tspan></text>
+      </g>
+      <text id="Engineering_is_one_of_the_earliest_forms_of_technical_studies_which_has_been_vital_in_setting_up_the_global_standard_of_brilliance_in_the_various_disciplines_of_science_and_innovative_technology._It_has_also_delivered_innumerable_assets_and_utilities_" data-name="Engineering is one of the earliest forms of technical 
+studies, which has been vital in setting up the global 
+standard of brilliance in the various disciplines of 
+science and innovative technology. It has also delivered 
+innumerable assets and utilities " transform="translate(1077 517)" fill="#fff" font-size="30" font-family="Calibri-Bold, Calibri" font-weight="700"><tspan x="0" y="0">Engineering Is One Of The Earliest Forms Of Technical </tspan><tspan x="0" y="37">Studies, Which Has Been Vital In Setting Up The Global </tspan><tspan x="0" y="74">Standard Of Brilliance In The Various Disciplines Of </tspan><tspan x="0" y="111">Science And Innovative Technology. It Has Also Delivered </tspan><tspan x="0" y="148">Innumerable Assets And Utilities To The Society, </tspan><tspan x="0" y="185">Contributing To The Welfare Of Humanity. The Faculty</tspan><tspan x="0" y="222">Of Engineering Plays The Central Role Of Grooming And </tspan><tspan x="0" y="259">Developing Engineers And Technical Experts Who Play The </tspan><tspan x="0" y="296">Role Of Framing Lives Not Only In The Form Of Technology, </tspan><tspan x="0" y="333">But Also In The Form Of Life Sciences.</tspan></text>
+      <text id="www.paruluniversity.ac.in" transform="translate(1077 912)" fill="#fff" font-size="35" font-family="MicrosoftSansSerif, Microsoft Sans Serif"><tspan x="0" y="0">www.paruluniversity.ac.in</tspan></text>
+    </g>
+    <line id="Line_94" data-name="Line 94" x2="180" transform="translate(1087.5 460.5)" fill="none" stroke="#fff" stroke-linecap="round" stroke-width="5"/>
+  </g>
+</svg>

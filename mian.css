@@ -1,0 +1,230 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+}
+
+body {
+  background-color: #3aafa9;
+}
+
+.main_con {
+  width: 100vw;
+  height: 100vh;
+  scroll-snap-type: y mandatory;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.main_con::-webkit-scrollbar {
+  /* display: none; */
+}
+
+section {
+  scroll-snap-align: start;
+  scroll-snap-stop: center;
+  position: relative;
+  min-height: 100vh;
+}
+
+section:first-of-type .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+
+section:first-of-type .header > nav > a {
+  text-decoration: none;
+  color: white;
+  font-size: 2em;
+  padding: 0px 50px;
+  font-weight: 500;
+}
+
+section:first-of-type .header > nav > a:hover {
+  color: yellow;
+}
+
+section:first-of-type .content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section:first-of-type .content > h1 {
+  color: white;
+  font-size: 8em;
+  font-weight: 800;
+}
+
+section:first-of-type .content > p {
+  font-size: 2em;
+  font-weight: 800;
+}
+
+section:first-of-type .main_btn {
+  position: absolute;
+  bottom: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 25px 50px;
+  border-radius: 100px;
+  background-color: white;
+  font-weight: 900;
+  font-size: 1.5em;
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  transition: all ease 0.25s;
+}
+
+section:first-of-type .main_btn:hover {
+  box-shadow: 0 0 10px black;
+  background-color: yellow;
+  color: black;
+}
+
+section:first-of-type .main_btn > img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, 100%);
+  animation: scroll-Up-Down ease 1s infinite alternate-reverse;
+}
+
+@keyframes scroll-Up-Down {
+  to {
+    transform: translate(-50%, 110%);
+  }
+}
+
+section:nth-of-type(2) {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: px;
+}
+
+section:nth-of-type(2) > div {
+  width: 45%;
+  max-width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 50px 10px 10px 10px;
+  border-radius: 50px;
+  box-shadow: 0 0 10px black;
+}
+
+section:nth-of-type(2) > div:first-of-type {
+  background-color: black;
+}
+
+section:nth-of-type(2) > div:last-of-type {
+  background-color: white;
+}
+
+section:nth-of-type(2) > div > img {
+  width: 100%;
+  object-fit: contain;
+  max-height: 350px;
+}
+section:nth-of-type(2) > div .card_content {
+  margin: 10px;
+  flex: 1;
+  background-color: white;
+  padding: 50px 25px 10px 25px;
+  border-radius: 50px;
+  font-size: 2em;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section:nth-of-type(2) > div:last-of-type .card_content {
+  background-color: black;
+  color: white;
+}
+
+section:nth-of-type(2) > div .card_content > a {
+  margin: 20px auto 0 auto;
+  padding: 15px 25px;
+  border-radius: 100px;
+  background-color: black;
+  font-weight: 900;
+  font-size: 1em;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  transition: all ease 0.25s;
+}
+
+section:nth-of-type(2) > div .card_content > a:hover {
+  background-color: white;
+  color: black;
+  box-shadow: 0 0 5px black;
+}
+
+section:nth-of-type(2) > div:last-of-type .card_content > a {
+  background-color: white;
+  color: black;
+}
+
+section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px white;
+}
+
+section:nth-of-type(3) {
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+
+section:nth-of-type(3) > div {
+  margin: 20px;
+  display: flex;
+}
+
+section:nth-of-type(3) > div:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+
+section:nth-of-type(3) > div > img {
+  flex: 1;
+  width: 100%;
+  object-fit: contain;
+}
+
+section:nth-of-type(3) > div > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  font-size: 2.5em;
+}
+
+section:nth-of-type(3) > div > div > h1 {
+  margin: 50px 0;
+  color: yellow;
+  font-weight: 600;
+}
+
+section:nth-of-type(3) > div > div > p {
+  color: white;
+  font-weight: 600;
+}
+
+section:nth-of-type(3) > div > div > p::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  background-color: white;
+  transform: translateY(-550%);
+}
