@@ -17,12 +17,11 @@ body {
 }
 
 .main_con::-webkit-scrollbar {
-  /* display: none; */
+  display: none;
 }
 
 section {
   scroll-snap-align: start;
-  scroll-snap-stop: center;
   position: relative;
   min-height: 100vh;
 }
@@ -119,11 +118,11 @@ section:nth-of-type(2) > div {
 }
 
 section:nth-of-type(2) > div:first-of-type {
-  background-color: black;
+  background-color: white;
 }
 
 section:nth-of-type(2) > div:last-of-type {
-  background-color: white;
+  background-color: black;
 }
 
 section:nth-of-type(2) > div > img {
@@ -134,7 +133,8 @@ section:nth-of-type(2) > div > img {
 section:nth-of-type(2) > div .card_content {
   margin: 10px;
   flex: 1;
-  background-color: white;
+  background-color: black;
+  color: white;
   padding: 50px 25px 10px 25px;
   border-radius: 50px;
   font-size: 2em;
@@ -145,39 +145,41 @@ section:nth-of-type(2) > div .card_content {
 }
 
 section:nth-of-type(2) > div:last-of-type .card_content {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 section:nth-of-type(2) > div .card_content > a {
   margin: 20px auto 0 auto;
   padding: 15px 25px;
   border-radius: 100px;
-  background-color: black;
+  background-color: white;
   font-weight: 900;
   font-size: 1em;
   text-decoration: none;
-  color: white;
+  color: black;
   text-transform: uppercase;
   transition: all ease 0.25s;
 }
 
 section:nth-of-type(2) > div .card_content > a:hover {
+  background-color: black;
+  color: white;
+  box-shadow: 0 0 5px white;
+}
+
+section:nth-of-type(2) > div:last-of-type .card_content > a {
+  background-color: black;
+  color: white;
+}
+
+section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
   background-color: white;
   color: black;
   box-shadow: 0 0 5px black;
 }
 
-section:nth-of-type(2) > div:last-of-type .card_content > a {
-  background-color: white;
-  color: black;
-}
-
-section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
-  background-color: black;
-  color: white;
-  box-shadow: 0 0 5px white;
-}
+/* section 3 */
 
 section:nth-of-type(3) {
   display: flex;
@@ -228,3 +230,67 @@ section:nth-of-type(3) > div > div > p::before {
   background-color: white;
   transform: translateY(-550%);
 }
+
+/* section 3 End*/
+
+footer {
+  scroll-snap-align: start;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+/* Tablet */
+@media (max-width: 1200px) {
+  section:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  /* section 3 */
+  section:nth-of-type(3) {
+    padding: unset;
+  }
+  section:nth-of-type(3) > div {
+    flex-direction: column;
+  }
+  section:nth-of-type(3) > div:nth-of-type(2) {
+    flex-direction: column;
+  }
+
+  section:nth-of-type(3) > div > div {
+    padding: unset;
+    font-size: unset;
+  }
+  /* section 3 End*/
+}
+
+/* Tablet End*/
+
+/* Phone */
+
+@media (max-width: 600px) {
+  .main_con {
+    scroll-snap-type: unset;
+  }
+
+  .main_con .home > .header,
+  .main_con .home > img,
+  .main_con .home > div,
+  .main_con .home > a {
+    display: none;
+  }
+
+  #cards > div {
+    width: unset;
+    border-radius: unset;
+  }
+
+  #cards > div .card_content {
+    margin: unset;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: unset;
+  }
+}
+
+/* Phone End*/
