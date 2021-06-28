@@ -1,27 +1,101 @@
+@font-face {
+  font-family: custom;
+  src: url("./asset/Montserrat-Regular.ttf");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+  font-family: custom;
+}
+
 body {
   background-color: #3aafa9;
 }
 
-.main_con {
-  width: 100vw;
-  height: 100vh;
-  scroll-snap-type: y mandatory;
-  overflow-y: auto;
-  scroll-behavior: smooth;
+/* body::-webkit-scrollbar {
+  display: none;
+} */
+
+.overlay_menu {
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  backdrop-filter: blur(20px);
+  z-index: 2000;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all ease 0.5s;
+  opacity: 1;
 }
 
-.main_con::-webkit-scrollbar {
-  display: none;
+.overlay_menu .closeMenu {
+  position: absolute;
+  top: 0;
+  right: 0;
+  float: right;
+  padding: 10px;
+}
+
+.overlay_menu > nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.overlay_menu > nav > a {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  font-weight: 800;
+  margin: 10px 0px;
+  font-size: x-large;
+  border-radius: 10px 0 10px 0;
+  text-align: center;
+  color: white;
+  text-shadow: 0 0 10px black;
+}
+
+.overlay_menu > nav > a:hover,
+.menu_selected {
+  border-bottom: 1px solid;
+  border-top: 1px solid;
+}
+
+.scrollToTop {
+  cursor: pointer;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 1000;
+  box-shadow: 0 0 5px black;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(100px);
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.25s;
 }
 
 section {
-  scroll-snap-align: start;
   position: relative;
   min-height: 100vh;
 }
@@ -114,21 +188,23 @@ section:nth-of-type(2) > div {
   flex-direction: column;
   padding: 50px 10px 10px 10px;
   border-radius: 50px;
-  box-shadow: 0 0 10px black;
 }
 
 section:nth-of-type(2) > div:first-of-type {
   background-color: white;
+  box-shadow: 0 0 10px black;
 }
 
 section:nth-of-type(2) > div:last-of-type {
   background-color: black;
+  box-shadow: 0 0 10px white;
 }
 
 section:nth-of-type(2) > div > img {
   width: 100%;
   object-fit: contain;
   max-height: 350px;
+  margin: 10px 0;
 }
 section:nth-of-type(2) > div .card_content {
   margin: 10px;
@@ -234,9 +310,8 @@ section:nth-of-type(3) > div > div > p::before {
 /* section 3 End*/
 
 footer {
-  scroll-snap-align: start;
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
   background-color: black;
 }
 
@@ -269,15 +344,11 @@ footer {
 /* Phone */
 
 @media (max-width: 600px) {
-  .main_con {
-    scroll-snap-type: unset;
-  }
-
-  .main_con .home > .header,
-  .main_con .home > img,
-  .main_con .home > div,
-  .main_con .home > a {
-    display: none;
+  .home > .header,
+  .home > img,
+  .home > div,
+  .home > a {
+    display: none !important;
   }
 
   #cards > div {
@@ -288,8 +359,12 @@ footer {
   #cards > div .card_content {
     margin: unset;
     border-radius: 5px;
-    padding: 5px;
+    padding: 10px;
     font-size: unset;
+  }
+
+  #cards > div > img {
+    max-height: 250px;
   }
 }
 

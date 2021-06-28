@@ -4,99 +4,113 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#3aafa9" />
     <link rel="stylesheet" href="./mian.css" />
+    <script src="./main.js"></script>
     <title>PICET</title>
   </head>
   <body>
-    <div class="main_con">
-      <section class="home">
-        <div class="header">
-          <div class="logo">
-            <img src="./public/logo.svg" alt="logo" />
-          </div>
-          <nav>
-            <a href="#">One</a>
-            <a href="#">Two</a>
-            <a href="#">Three</a>
-            <a href="#">Four</a>
-          </nav>
+    <div class="overlay_menu" id="overlay_menu">
+      <a href="javascript:toggleMenu(false)" class="closeMenu">
+        <img src="./asset/close.svg" alt="closeMenu" />
+      </a>
+      <nav>
+        <a href="#">One</a>
+        <a href="#">Two</a>
+        <a href="#">Three</a>
+        <a href="#">Four</a>
+      </nav>
+    </div>
+    <div class="scrollToTop" id="scrollToTop" onclick="scrollToTop()">
+      <img src="./asset/arrow_upward.svg" alt="scrollToTop" />
+    </div>
+    <section class="home">
+      <div class="header">
+        <div class="logo">
+          <img src="./asset/logo.svg" alt="logo" />
         </div>
-        <div class="content">
-          <h1>Lorem Ipsum</h1>
+        <nav>
+          <a href="#">One</a>
+          <a href="#">Two</a>
+          <a href="#">Three</a>
+          <a href="#">Four</a>
+        </nav>
+      </div>
+      <div class="content">
+        <h1>Lorem Ipsum</h1>
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
+          architecto.
+        </p>
+      </div>
+      <a href="#cards" class="main_btn"
+        >Lorem Ipsum
+        <img src="./asset/scroll.svg" alt="scroll" />
+      </a>
+    </section>
+    <section id="cards">
+      <div>
+        <img src="./asset/cse.svg" alt="CSE" />
+        <div class="card_content">
           <p>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Itaque,
-            architecto.
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+            vitae. Explicabo rem magnam aut voluptatem, inventore ipsam
+            consequuntur tempora libero officia iste mollitia debitis nemo animi
+            porro minima doloribus, fugit enim! Vel mollitia unde modi
+            voluptatum neque corrupti libero animi velit voluptate enim
+            molestias fuga sequi accusamus, adipisci nulla ratione.
+          </p>
+          <a href="#" class="card_btn">Lorem Ipsum</a>
+        </div>
+      </div>
+      <div>
+        <img src="./asset/mechanical card.svg" alt="Mechanical" />
+        <div class="card_content">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Obcaecati,
+            vitae. Explicabo rem magnam aut voluptatem, inventore ipsam
+            consequuntur tempora libero officia iste mollitia debitis nemo animi
+            porro minima doloribus, fugit enim! Vel mollitia unde modi
+            voluptatum neque corrupti libero animi velit voluptate enim
+            molestias fuga sequi accusamus, adipisci nulla ratione.
+          </p>
+          <a href="#" class="card_btn">Lorem Ipsum</a>
+        </div>
+      </div>
+    </section>
+    <section class="about">
+      <div>
+        <img src="./asset/Parul-University.svg" alt="Parul-University" />
+        <div>
+          <h1>A Vibrant University Experience</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            fuga blanditiis, numquam dolore alias saepe voluptatum repudiandae
+            optio quidem fugit accusantium aperiam est deleniti, laborum rem
+            enim consectetur non odit magni dolor libero voluptas tempore?
+            Dolore commodi mollitia minus distinctio laudantium. Doloribus vel
+            facilis rem suscipit, porro maiores odio quae.
           </p>
         </div>
-        <a href="#cards" class="main_btn"
-          >Lorem Ipsum
-          <img src="./public/scroll.svg" alt="scroll" />
-        </a>
-      </section>
-      <section id="cards">
+      </div>
+      <div>
+        <img
+          src="./asset/faculty of engineering.svg"
+          alt="faculty of engineering"
+        />
         <div>
-          <img src="./public/cse.svg" alt="CSE" />
-          <div class="card_content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Obcaecati, vitae. Explicabo rem magnam aut voluptatem, inventore
-              ipsam consequuntur tempora libero officia iste mollitia debitis
-              nemo animi porro minima doloribus, fugit enim! Vel mollitia unde
-              modi voluptatum neque corrupti libero animi velit voluptate enim
-              molestias fuga sequi accusamus, adipisci nulla ratione.
-            </p>
-            <a href="#" class="card_btn">Lorem Ipsum</a>
-          </div>
+          <h1>A Vibrant University Experience</h1>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus
+            fuga blanditiis, numquam dolore alias saepe voluptatum repudiandae
+            optio quidem fugit accusantium aperiam est deleniti, laborum rem
+            enim consectetur non odit magni dolor libero voluptas tempore?
+            Dolore commodi mollitia minus distinctio laudantium. Doloribus vel
+            facilis rem suscipit, porro maiores odio quae.
+          </p>
         </div>
-        <div>
-          <img src="./public/mechanical card.svg" alt="Mechanical" />
-          <div class="card_content">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Obcaecati, vitae. Explicabo rem magnam aut voluptatem, inventore
-              ipsam consequuntur tempora libero officia iste mollitia debitis
-              nemo animi porro minima doloribus, fugit enim! Vel mollitia unde
-              modi voluptatum neque corrupti libero animi velit voluptate enim
-              molestias fuga sequi accusamus, adipisci nulla ratione.
-            </p>
-            <a href="#" class="card_btn">Lorem Ipsum</a>
-          </div>
-        </div>
-      </section>
-      <section class="about">
-        <div>
-          <img src="./public/Parul-University.svg" alt="Parul-University" />
-          <div>
-            <h1>A Vibrant University Experience</h1>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusamus fuga blanditiis, numquam dolore alias saepe voluptatum
-              repudiandae optio quidem fugit accusantium aperiam est deleniti,
-              laborum rem enim consectetur non odit magni dolor libero voluptas
-              tempore? Dolore commodi mollitia minus distinctio laudantium.
-              Doloribus vel facilis rem suscipit, porro maiores odio quae.
-            </p>
-          </div>
-        </div>
-        <div>
-          <img
-            src="./public/faculty of engineering.svg"
-            alt="faculty of engineering"
-          />
-          <div>
-            <h1>A Vibrant University Experience</h1>
-            <p>
-              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-              Accusamus fuga blanditiis, numquam dolore alias saepe voluptatum
-              repudiandae optio quidem fugit accusantium aperiam est deleniti,
-              laborum rem enim consectetur non odit magni dolor libero voluptas
-              tempore? Dolore commodi mollitia minus distinctio laudantium.
-              Doloribus vel facilis rem suscipit, porro maiores odio quae.
-            </p>
-          </div>
-        </div>
-      </section>
-      <footer></footer>
-    </div>
+      </div>
+    </section>
+    <footer></footer>
   </body>
 </html>
