@@ -143,7 +143,7 @@ section {
 
 .home .main_btn {
   position: absolute;
-  bottom: 20%;
+  bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
   padding: 25px 50px;
@@ -180,7 +180,7 @@ section {
 section:nth-of-type(2) {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 section:nth-of-type(2) > div {
@@ -269,7 +269,6 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
 /* section 3 */
 
 .about {
-  background-color: black;
   display: flex;
   flex-direction: column;
 }
@@ -280,6 +279,7 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: #1e272e;
 }
 
 .about > div > img {
@@ -290,10 +290,12 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
 
 .about > div > div {
   position: absolute;
-  width: 50vw;
+  width: 60vw;
   position: absolute;
   color: white;
-  font-size: xx-large;
+  word-spacing: 10px;
+  text-shadow: 0 0 5px black;
+  font-size: x-large;
   user-select: none;
 }
 .about > div > div > h1 {
@@ -314,16 +316,144 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
 
 footer {
   width: 100%;
-  min-height: 100vh;
+  padding: 50px;
   background-color: black;
+  color: white;
+}
+footer > ul {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer > ul > li {
+  margin: 10px;
+  padding: 10px;
 }
 
 /* Tablet */
 @media (max-width: 1200px) {
   /* Home */
   .home .header {
+    padding: 20px;
+    max-height: 100px;
+  }
+  .home .header > .logo {
+    width: 150px;
+  }
+
+  .home .header > .logo > img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  .home .header > a {
+    display: block;
+  }
+
+  .home .header > nav {
+    display: none;
+  }
+
+  .home .content {
+    padding: 25px;
+    width: fit-content;
+  }
+
+  .home .content > h1 {
+    font-size: 4.5em !important;
+  }
+
+  .home .content > p {
+    font-size: 2.5em !important;
+  }
+
+  .home .main_btn {
+    bottom: 15%;
+    font-size: large;
+    width: max-content;
+    padding: 20px 30px;
+  }
+
+  .home .main_btn > img {
+    width: 30px;
+    transform: translate(-50%, 100%);
+    animation: scroll-Up-Down ease 1s infinite alternate-reverse;
+  }
+
+  @keyframes scroll-Up-Down {
+    to {
+      transform: translate(-50%, 120%);
+    }
+  }
+
+  /* Home End */
+  /* Cards  */
+
+  section:nth-of-type(2) {
+    flex-direction: column;
+    padding: 50px;
+  }
+
+  section:nth-of-type(2) > div {
+    width: 100%;
+    align-items: center;
+    max-width: unset;
+    flex-direction: row;
     padding: 10px;
-    max-height: 60px;
+  }
+
+  #cards > div:last-of-type {
+    margin-top: 20px;
+    flex-direction: row-reverse;
+  }
+
+  #cards > div > img {
+    width: 50%;
+    flex: 1;
+  }
+
+  /* Cards End */
+
+  /* section 3 */
+
+  .about {
+    padding: unset;
+    background-color: unset;
+  }
+  .about > div {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .about > div > img {
+    opacity: unset;
+    border: 10px solid white;
+  }
+  .about > div > div {
+    position: unset;
+    padding: unset;
+    width: unset;
+    font-size: unset;
+    word-spacing: unset;
+  }
+  .about > div > div > h1 {
+    margin-top: 10px;
+  }
+
+  /* section 3 End*/
+}
+
+/* Tablet End*/
+
+/* Phone */
+
+@media (max-width: 800px) {
+  /* Home */
+  .home .header {
+    padding: 20px;
+    max-height: 65px;
   }
   .home .header > .logo {
     width: 100px;
@@ -358,7 +488,8 @@ footer {
   .home .main_btn {
     bottom: 15%;
     width: max-content;
-    padding: 10px;
+    font-size: unset;
+    padding: 15px 25px;
   }
 
   .home .main_btn > img {
@@ -374,39 +505,6 @@ footer {
   }
 
   /* Home End */
-  /* Cards  */
-
-  section:nth-of-type(2) {
-    flex-direction: column;
-    padding: 50px;
-  }
-
-  section:nth-of-type(2) > div {
-    width: 100%;
-    align-items: center;
-    max-width: unset;
-    flex-direction: row;
-    padding: 10px;
-  }
-
-  #cards > div:last-of-type {
-    margin-top: 20px;
-    flex-direction: row-reverse;
-  }
-
-  #cards > div > img {
-    width: 50%;
-    flex: 1;
-  }
-
-  /* Cards End */
-}
-
-/* Tablet End*/
-
-/* Phone */
-
-@media (max-width: 800px) {
   /* Cards  */
 
   section:nth-of-type(2) {
@@ -451,6 +549,7 @@ footer {
   }
 
   .about > div > img {
+    border-radius: 15px;
     opacity: unset;
     border: 10px solid white;
   }
@@ -465,6 +564,15 @@ footer {
   }
 
   /* section 3 End*/
+  /* fotter */
+  footer {
+    padding: 30px;
+  }
+  footer > ul > li {
+    margin: 10px;
+    padding: 10px;
+  }
+  /* fotter End*/
 }
 
 /* Phone End*/
