@@ -18,9 +18,9 @@ body {
   background-color: #3aafa9;
 }
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}
 
 .overlay_menu {
   display: flex;
@@ -181,12 +181,11 @@ section:nth-of-type(2) {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: px;
 }
 
 section:nth-of-type(2) > div {
   width: 45%;
-  max-width: 800px;
+  max-width: 600px;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -217,11 +216,19 @@ section:nth-of-type(2) > div .card_content {
   color: white;
   padding: 50px 25px 10px 25px;
   border-radius: 50px;
-  font-size: 2em;
+  font-size: 1.5em;
   width: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+section:nth-of-type(2) > div:first-of-type > .card_content {
+  box-shadow: 0 0 5px black;
+}
+
+section:nth-of-type(2) > div:last-of-type > .card_content {
+  box-shadow: 0 0 5px white;
 }
 
 section:nth-of-type(2) > div:last-of-type .card_content {
@@ -261,53 +268,45 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
 
 /* section 3 */
 
-section:nth-of-type(3) {
+.about {
+  background-color: black;
   display: flex;
   flex-direction: column;
-  padding: 100px;
 }
 
-section:nth-of-type(3) > div {
-  margin: 20px;
-  display: flex;
-}
-
-section:nth-of-type(3) > div:nth-of-type(2) {
-  flex-direction: row-reverse;
-}
-
-section:nth-of-type(3) > div > img {
-  flex: 1;
-  width: 100%;
-  object-fit: contain;
-}
-
-section:nth-of-type(3) > div > div {
+.about > div {
+  position: relative;
   flex: 1;
   display: flex;
-  flex-direction: column;
+  align-items: center;
   justify-content: center;
-  padding: 50px;
-  font-size: 2.5em;
 }
 
-section:nth-of-type(3) > div > div > h1 {
-  margin: 50px 0;
-  color: yellow;
-  font-weight: 600;
+.about > div > img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.35;
 }
 
-section:nth-of-type(3) > div > div > p {
+.about > div > div {
+  position: absolute;
+  width: 50vw;
+  position: absolute;
   color: white;
-  font-weight: 600;
+  font-size: xx-large;
+  user-select: none;
+}
+.about > div > div > h1 {
+  color: yellow;
+  margin-bottom: 50px;
 }
 
-section:nth-of-type(3) > div > div > p::before {
+.about > div > div > p::before {
   content: "";
   position: absolute;
   width: 150px;
   height: 5px;
-  background-color: white;
+  background-color: yellow;
   transform: translateY(-550%);
 }
 
@@ -321,13 +320,6 @@ footer {
 
 /* Tablet */
 @media (max-width: 1200px) {
-}
-
-/* Tablet End*/
-
-/* Phone */
-
-@media (max-width: 600px) {
   /* Home */
   .home .header {
     padding: 10px;
@@ -382,18 +374,57 @@ footer {
   }
 
   /* Home End */
-
   /* Cards  */
 
   section:nth-of-type(2) {
     flex-direction: column;
+    padding: 50px;
   }
 
-  #cards > div {
+  section:nth-of-type(2) > div {
+    width: 100%;
+    align-items: center;
+    max-width: unset;
+    flex-direction: row;
+    padding: 10px;
+  }
+
+  #cards > div:last-of-type {
+    margin-top: 20px;
+    flex-direction: row-reverse;
+  }
+
+  #cards > div > img {
+    width: 50%;
+    flex: 1;
+  }
+
+  /* Cards End */
+}
+
+/* Tablet End*/
+
+/* Phone */
+
+@media (max-width: 800px) {
+  /* Cards  */
+
+  section:nth-of-type(2) {
+    flex-direction: column;
+    padding: unset;
+  }
+
+  section:nth-of-type(2) > div {
+    max-width: 550px;
+    flex-direction: column;
     width: unset;
     border-radius: unset;
   }
 
+  #cards > div:last-of-type {
+    margin: unset;
+    flex-direction: column;
+  }
   #cards > div .card_content {
     margin: unset;
     border-radius: 5px;
@@ -402,27 +433,64 @@ footer {
   }
 
   #cards > div > img {
+    width: 100%;
     max-height: 250px;
   }
 
   /* Cards End */
 
   /* section 3 */
-  section:nth-of-type(3) {
+
+  .about {
     padding: unset;
+    background-color: unset;
   }
-  section:nth-of-type(3) > div {
+  .about > div {
     flex-direction: column;
-  }
-  section:nth-of-type(3) > div:nth-of-type(2) {
-    flex-direction: column;
+    padding: 10px;
   }
 
-  section:nth-of-type(3) > div > div {
+  .about > div > img {
+    opacity: unset;
+    border: 10px solid white;
+  }
+  .about > div > div {
+    position: unset;
     padding: unset;
+    width: unset;
     font-size: unset;
   }
+  .about > div > div > h1 {
+    margin-top: 10px;
+  }
+
   /* section 3 End*/
 }
 
 /* Phone End*/
+
+/* Animations */
+
+@keyframes PopRight {
+  from {
+    transform: translateX(200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes PopLeft {
+  from {
+    transform: translateX(-200px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
