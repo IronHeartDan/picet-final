@@ -104,17 +104,21 @@ section {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 50px 100px;
+  padding: 25px 25px;
 }
 
 .home .header > a {
   display: none;
 }
 
+.home .header > nav {
+  display: flex;
+}
+
 .home .header > nav > a {
   text-decoration: none;
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   padding: 0px 50px;
   font-weight: 500;
 }
@@ -132,7 +136,7 @@ section {
 
 .home .content > h1 {
   color: white;
-  font-size: 8em;
+  font-size: 5em;
   font-weight: 800;
 }
 
@@ -146,7 +150,10 @@ section {
   bottom: 15%;
   left: 50%;
   transform: translateX(-50%);
-  padding: 25px 50px;
+}
+
+.home .main_btn > a {
+  padding: 15px 25px;
   border-radius: 100px;
   background-color: white;
   font-weight: 900;
@@ -157,7 +164,7 @@ section {
   transition: all ease 0.25s;
 }
 
-.home .main_btn:hover {
+.home .main_btn > a:hover {
   box-shadow: 0 0 10px black;
   background-color: yellow;
   color: black;
@@ -167,13 +174,13 @@ section {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, 100%);
+  transform: translate(-50%, 60%);
   animation: scroll-Up-Down ease 1s infinite alternate-reverse;
 }
 
 @keyframes scroll-Up-Down {
   to {
-    transform: translate(-50%, 110%);
+    transform: translate(-50%, 80%);
   }
 }
 
@@ -184,13 +191,13 @@ section:nth-of-type(2) {
 }
 
 section:nth-of-type(2) > div {
-  width: 45%;
+  width: 30%;
   max-width: 600px;
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 50px 10px 10px 10px;
-  border-radius: 50px;
+  padding: 25px 5px 5px 5px;
+  border-radius: 25px;
 }
 
 section:nth-of-type(2) > div:first-of-type {
@@ -214,9 +221,9 @@ section:nth-of-type(2) > div .card_content {
   flex: 1;
   background-color: black;
   color: white;
-  padding: 50px 25px 10px 25px;
-  border-radius: 50px;
-  font-size: 1.5em;
+  padding: 25px 15px 5px 15px;
+  border-radius: 25px;
+  font-size: 1em;
   width: fit-content;
   display: flex;
   flex-direction: column;
@@ -271,6 +278,7 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
 .about {
   display: flex;
   flex-direction: column;
+  background-color: black;
 }
 
 .about > div {
@@ -279,13 +287,12 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: #1e272e;
 }
 
 .about > div > img {
   width: 100%;
   object-fit: cover;
-  opacity: 0.35;
+  opacity: 0.2;
 }
 
 .about > div > div {
@@ -293,9 +300,8 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
   width: 60vw;
   position: absolute;
   color: white;
-  word-spacing: 10px;
-  text-shadow: 0 0 5px black;
-  font-size: x-large;
+  word-spacing: 5px;
+  font-size: large;
   user-select: none;
 }
 .about > div > div > h1 {
@@ -316,7 +322,7 @@ section:nth-of-type(2) > div:last-of-type .card_content > a:hover {
 
 footer {
   width: 100%;
-  padding: 50px;
+  padding: 25px;
   background-color: black;
   color: white;
 }
@@ -358,7 +364,7 @@ footer > ul > li {
 
   .home .content {
     padding: 25px;
-    width: fit-content;
+    width: 60%;
   }
 
   .home .content > h1 {
@@ -366,7 +372,7 @@ footer > ul > li {
   }
 
   .home .content > p {
-    font-size: 2.5em !important;
+    font-size: 2em !important;
   }
 
   .home .main_btn {
@@ -420,7 +426,7 @@ footer > ul > li {
 
   .about {
     padding: unset;
-    background-color: unset;
+    background-color: dimgrey;
   }
   .about > div {
     flex-direction: column;
@@ -429,7 +435,6 @@ footer > ul > li {
 
   .about > div > img {
     opacity: unset;
-    border: 10px solid white;
   }
   .about > div > div {
     position: unset;
@@ -485,7 +490,7 @@ footer > ul > li {
     font-size: 1.5em !important;
   }
 
-  .home .main_btn {
+  .home .main_btn > a {
     bottom: 15%;
     width: max-content;
     font-size: unset;
@@ -541,7 +546,6 @@ footer > ul > li {
 
   .about {
     padding: unset;
-    background-color: unset;
   }
   .about > div {
     flex-direction: column;
@@ -551,7 +555,6 @@ footer > ul > li {
   .about > div > img {
     border-radius: 15px;
     opacity: unset;
-    border: 10px solid white;
   }
   .about > div > div {
     position: unset;

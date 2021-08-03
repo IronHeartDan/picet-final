@@ -1,7 +1,6 @@
 window.onload = (e) => {
   let magic = new IntersectionObserver((entries) => {
     if (entries[0].intersectionRatio > 0) {
-      console.log("yjsdbosua");
       entries[0].target.style.animation = "PopLeft  ease 250ms 0s";
       entries[0].target.style.opacity = "1";
     } else {
@@ -11,7 +10,6 @@ window.onload = (e) => {
   });
 
   let animElements = document.querySelectorAll(".anim");
-  console.log("Length " + animElements.length);
   animElements.forEach((e) => {
     magic.observe(e);
   });
