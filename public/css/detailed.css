@@ -1,0 +1,583 @@
+@font-face {
+  font-family: custom;
+  src: url("../asset/Montserrat-Regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: custom;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollToTop {
+  cursor: pointer;
+  display: flex;
+  width: 50px;
+  height: 50px;
+  opacity: 0;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  margin: 10px;
+  z-index: 1000;
+  box-shadow: 0 0 5px black;
+  background-color: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(5px);
+  justify-content: center;
+  align-items: center;
+  transition: all ease-in-out 0.25s;
+}
+
+.nav_header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* background-color: #a4b0be; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: auto;
+  box-shadow: 0 0 5px 0 black;
+  z-index: 1000;
+  background-color: #7d848b;
+  height: 60px;
+}
+
+.nav_header > .logo {
+  margin: 10px;
+  width: 100px;
+  pointer-events: none;
+}
+
+.nav_header > .logo > img {
+  width: 100%;
+  object-fit: contain;
+}
+
+.nav_header > nav {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: unset;
+  overflow: auto;
+}
+
+.nav_header > nav::-webkit-scrollbar {
+  display: none;
+}
+
+.nav_header > nav > a {
+  margin: 0 5px;
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  transition: background-color ease 0.25s;
+  min-width: max-content;
+}
+
+.nav_header > nav > a:hover,
+.active {
+  border-bottom: 2px solid black;
+}
+
+.nav_menu {
+  display: none;
+}
+
+.mainCon > .home {
+  position: relative;
+  max-height: calc(100vh - 60px);
+  overflow: hidden;
+  background-color: black;
+}
+
+.mainCon > .home > img {
+  width: 100%;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.mainCon > .home > .homeContent {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  font-size: 1.25em;
+}
+
+.mainCon > .home > .homeContent > h1 {
+  color: yellow;
+  margin-bottom: 50px;
+}
+
+.mainCon > .home > .homeContent > p {
+  color: white;
+}
+
+.mainCon > .home > .homeContent > p::before {
+  content: "";
+  position: absolute;
+  width: 150px;
+  height: 5px;
+  background-color: yellow;
+  transform: translateY(-550%);
+}
+
+.mainCon > .themes {
+  max-height: unset;
+  display: flex;
+  align-items: baseline;
+  padding: 20px 20px 0 20px;
+  flex-direction: column;
+  background-color: #2c3a47;
+  z-index: 500;
+}
+
+.mainCon > .themes > h1 {
+  color: white;
+  position: relative;
+  font-size: 2em;
+}
+
+.mainCon > .themes > h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: translateY(10px);
+  background-color: yellow;
+}
+
+.mainCon > .themes > div {
+  flex: 1;
+  display: flex;
+  width: 100%;
+  flex-direction: row;
+}
+.mainCon > .themes > div > div {
+  flex: 1;
+  padding: 50px;
+}
+
+.mainCon > .themes > div > div > h1 {
+  color: yellow;
+}
+
+.mainCon > .themes > div > div > ul > li {
+  color: white;
+  padding: 10px;
+}
+
+.mainCon > .keynote {
+  background-color: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 15px;
+  box-shadow: 0 0 5px 0 black;
+}
+
+.mainCon > .keynote > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: contain;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.mainCon > .keynote > h1 {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 2em;
+}
+
+.mainCon > .keynote > h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  transform: translateY(15px);
+  background-color: yellow;
+}
+
+.mainCon > .keynote > ul {
+  padding: 50px;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainCon > .keynote > ul > li {
+  width: calc(50% - 30px);
+  padding: 20px;
+  border-bottom: 1px solid;
+  margin: 0 15px;
+}
+
+.mainCon > .keynote > ul > li > h1,
+.mainCon > .keynote > ul > li > h4 {
+  margin: 5px 0;
+}
+
+/* Committees */
+
+.mainCon > .committees {
+  background-color: #2c3e50;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: calc(100vh - 60px);
+  padding: 15px;
+  box-shadow: 0 0 5px 0 black;
+}
+
+.mainCon > .committees > img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  object-fit: contain;
+  z-index: -1;
+  opacity: 0.2;
+}
+
+.mainCon > .committees > h1 {
+  position: relative;
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: white;
+}
+
+.mainCon > .committees > h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  transform: translateY(15px);
+  background-color: yellow;
+}
+
+.mainCon > .committees > ul {
+  list-style: square;
+  padding: 50px;
+  flex: 1;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.mainCon > .committees > ul > li {
+  width: calc(50% - 30px);
+  padding: 20px;
+  color: white;
+  border-bottom: 2px solid white;
+  margin: 0 15px;
+}
+
+.mainCon > .committees > ul > li > h1,
+.mainCon > .committees > ul > li > h4 {
+  margin: 5px 0;
+  color: yellow;
+}
+
+.mainCon > .committees > ul > li > p {
+  color: white;
+}
+
+/* End Committees */
+
+.mainCon > .dates {
+  min-height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  background-color: #4b4b4b;
+}
+
+.mainCon > .dates > h1 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: white;
+}
+
+.mainCon > .dates > h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  transform: translateY(15px);
+  background-color: yellow;
+}
+
+.mainCon > .dates > div {
+  flex: 1;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.mainCon > .dates > div > div {
+  flex: 1;
+  padding: 10px;
+  display: flex;
+}
+
+.mainCon > .dates > div > div:first-of-type {
+  padding: 50px;
+  color: white;
+}
+
+table,
+th,
+td {
+  border: 2px dotted white;
+  width: 100%;
+  padding: 5px;
+  color: white;
+}
+
+.mainCon > .cfp {
+  /* min-height: calc(100vh - 60px); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 5px 0 black;
+}
+.mainCon > .cfp > h1 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 2em;
+}
+
+.mainCon > .cfp > h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  transform: translateY(15px);
+  background-color: yellow;
+}
+
+.mainCon > .cfp > div {
+  flex: 1;
+  display: flex;
+}
+
+.mainCon > .cfp > div > div {
+  flex: 1;
+  padding: 50px;
+}
+
+.mainCon > .regs {
+  /* min-height: calc(100vh - 60px); */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  box-shadow: 0 0 5px 0 black;
+  background-color: #4b4b4b;
+}
+
+.mainCon > .regs > h1 {
+  position: relative;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: white;
+}
+
+.mainCon > .regs > h1::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5px;
+  transform: translateY(15px);
+  background-color: yellow;
+}
+
+.mainCon > .regs > div {
+  flex: 1;
+  width: 100%;
+  display: flex;
+}
+
+.mainCon > .regs > div > div {
+  flex: 1;
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: center;
+}
+
+.mainCon > .regs > div > div:first-of-type > h1 {
+  color: yellow;
+  padding: 10px 0;
+}
+
+footer {
+  width: 100%;
+  padding: 25px;
+  background-color: black;
+  color: white;
+}
+footer > ul {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer > ul > li {
+  margin: 10px;
+  padding: 10px;
+}
+
+@media (max-width: 900px) {
+  .nav_header {
+    height: 60px;
+    flex-direction: column;
+    transition: all ease 0.5s;
+    align-items: unset;
+  }
+  .nav_header > nav {
+    display: none;
+    padding: unset;
+    width: 100%;
+    flex-direction: column;
+  }
+  .nav_header > nav > a {
+    display: none;
+    background-color: unset !important;
+    margin: 10px;
+    width: 80%;
+    text-align: start;
+  }
+  .nav_header > nav > a:hover,
+  .active {
+    background-color: unset !important;
+    padding: 14px 15px;
+    border-bottom: 2px solid;
+    border-radius: 2px;
+  }
+  .nav_menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    color: black;
+    margin: 15px !important;
+    padding: unset !important;
+    width: auto !important;
+    display: block !important;
+  }
+  .nav_header > nav > .nav_menu:hover {
+    width: auto;
+    background-color: unset !important;
+    padding: unset !important;
+    margin: 15px !important;
+    border-bottom: unset !important;
+    border-radius: unset !important;
+  }
+
+  .mainCon > .home {
+    min-height: 100vh;
+    max-height: unset;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+  }
+  .mainCon > .home > img {
+    opacity: unset;
+    margin-top: 50px;
+    width: 60%;
+  }
+  .mainCon > .home > .homeContent {
+    flex: 1;
+    padding: unset;
+    position: relative;
+    top: unset;
+    left: unset;
+    transform: unset;
+    font-size: unset;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 0px;
+  }
+
+  .mainCon > .themes > div {
+    flex-direction: column;
+  }
+  .mainCon > .themes > div > div {
+    padding: 20px;
+  }
+
+  .mainCon > .keynote > ul {
+    padding: 25px;
+  }
+
+  .mainCon > .keynote > ul > li {
+    width: calc(100% - 30px);
+  }
+
+  .mainCon > .committees > ul {
+    padding: 10px;
+  }
+
+  .mainCon > .committees > ul > li {
+    color: white;
+    width: calc(100% - 30px);
+  }
+
+  .mainCon > .dates > div {
+    flex-direction: column-reverse;
+  }
+  .mainCon > .dates > div > div:first-of-type {
+    padding: 20px;
+  }
+
+  .mainCon > .cfp > div {
+    flex-direction: column;
+  }
+  .mainCon > .cfp > div > div {
+    padding: 10px;
+  }
+  .mainCon > .regs > div {
+    flex-direction: column;
+  }
+  .mainCon > .regs > div > div {
+    padding: 10px;
+  }
+}
