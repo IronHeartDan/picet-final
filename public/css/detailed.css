@@ -352,11 +352,17 @@ body::-webkit-scrollbar {
   color: white;
 }
 
+.mainCon > .dates > div > div:last-of-type {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 table,
 th,
 td {
   border: 2px dotted white;
-  width: 100%;
+  /* width: 100%; */
   padding: 5px;
   color: white;
 }
@@ -443,6 +449,9 @@ td {
 .mainCon > .regs > div > div:first-of-type > h1 {
   color: yellow;
   padding: 10px 0;
+}
+.mainCon > .regs > div > div:first-of-type > ul {
+  padding: 10px;
 }
 
 footer {
@@ -579,5 +588,28 @@ footer > ul > li {
   }
   .mainCon > .regs > div > div {
     padding: 10px;
+  }
+  .mainCon > .regs > div > div:last-of-type {
+    padding: unset;
+  }
+
+  table,
+  th,
+  td {
+    font-size: x-small;
+  }
+}
+
+@media (max-width: 350px) {
+  table,
+  th,
+  td {
+    font-size: xx-small;
+  }
+  .mainCon > .regs {
+    padding: unset;
+  }
+  .mainCon > .regs > div > div:last-of-type {
+    padding: unset;
   }
 }
