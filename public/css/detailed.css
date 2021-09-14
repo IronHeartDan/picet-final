@@ -136,7 +136,7 @@ body::-webkit-scrollbar {
 .mainCon > .themes {
   max-height: unset;
   display: flex;
-  align-items: baseline;
+  align-items: center;
   padding: 20px 20px 0 20px;
   flex-direction: column;
   background-color: #2c3a47;
@@ -162,22 +162,26 @@ body::-webkit-scrollbar {
 
 .mainCon > .themes > div {
   flex: 1;
-  display: flex;
   width: 100%;
-  flex-direction: row;
-}
-.mainCon > .themes > div > div {
-  flex: 1;
-  padding: 50px;
 }
 
-.mainCon > .themes > div > div > h1 {
+.mainCon > .themes > div  > h1 {
+  margin-top: 20px;
+  text-align: center;
   color: yellow;
 }
 
-.mainCon > .themes > div > div > ul > li {
+.mainCon > .themes > div  > ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding: 50px;
+}
+
+.mainCon > .themes > div  > ul > li {
   color: white;
-  padding: 10px;
+  padding: 50px;
 }
 
 .mainCon > .keynote {
@@ -546,13 +550,16 @@ footer > ul > li {
     margin-bottom: 0px;
   }
 
-  .mainCon > .themes > div {
+
+  .mainCon > .themes > div > ul {
     flex-direction: column;
-  }
-  .mainCon > .themes > div > div {
-    padding: 20px;
+    align-items: baseline;
+    padding: 25px;
   }
 
+  .mainCon > .themes > div > ul > li{
+    padding: 10px;
+  }
   .mainCon > .keynote > ul {
     padding: 25px;
   }
