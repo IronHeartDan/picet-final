@@ -10,35 +10,32 @@
     <title>PiCET</title>
   </head>
   <body>
-    <div class="overlay_menu" id="overlay_menu">
-      <a href="javascript:toggleMenu(false)" class="closeMenu">
-        <img src="./asset/close.svg" alt="closeMenu" />
-      </a>
-      <nav>
-        <a href="#">Key Dates</a>
-        <a href="#">Register</a>
-        <a href="#">Previous PiCET</a>
-        <a href="https://paruluniversity.ac.in">Parul University</a>
-      </nav>
-    </div>
     <div class="scrollToTop" id="scrollToTop" onclick="scrollToTop()">
       <img src="./asset/arrow_upward.svg" alt="scrollToTop" />
     </div>
-    <section class="home">
-      <div class="header">
-        <div class="logo">
-          <img src="./asset/logo.svg" alt="logo" />
-        </div>
-        <nav>
-          <a href="#">Key Dates</a>
-          <a href="#">Register</a>
-          <a href="#">Previous PiCET</a>
-          <a href="https://paruluniversity.ac.in">Parul University</a>
-        </nav>
-        <a href="javascript:toggleMenu(true)">
-          <img src="./asset/menu.svg" alt="menu" />
-        </a>
+    <header class="nav_header" id="nav_header">
+      <div class="logo">
+        <img src="./asset/logo.svg" alt="logo" />
       </div>
+      <nav id="nav_itemCon">
+        <a href="#home" class="menu_item active">Home</a>
+        <a href="#themes" class="menu_item">Themes</a>
+        <a href="#keynote" class="menu_item">Keynote Speaker</a>
+        <a href="#committees" class="menu_item">Committees</a>
+        <a href="#dates" class="menu_item">Key Dates</a>
+        <a href="#" class="menu_item">Call For Papers</a>
+        <a href="#" class="menu_item">Registration Fees</a>
+        <a href="#" class="menu_item">Program Schedule</a>
+        <a href="#" class="menu_item">Publications</a>
+        <a href="#" class="menu_item">Sponsorship</a>
+        <a href="#" class="menu_item">Register</a>
+      </nav>
+      <a href="javascript:toggleMenu(true)" class="nav_menu" id="nav_menu">
+        <img src="./asset/menu.svg" alt="menu" />
+      </a>
+    </header>
+    <section class="home">
+      <img src="./asset/bg_home.jpg" alt="">
       <div class="content">
         <h1>PiCET 2022</h1>
         <p>

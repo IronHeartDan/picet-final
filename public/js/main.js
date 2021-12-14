@@ -34,42 +34,34 @@ document.onscroll = (e) => {
   }
 };
 
-function toggleScreen(type) {
-  let toggleScreen = document.getElementById("toggleScreen");
-  if (type === 0) {
-    document.documentElement
-      .requestFullscreen()
-      .then(() => {
-        toggleScreen.href = "javascript:toggleScreen(1)";
-        toggleScreen.innerHTML =
-          "<img src='./assest/normalScreen.svg' alt='NormalScreen' />";
-      })
-      .catch((e) => {
-        alert(e);
-      });
-  } else {
-    document
-      .exitFullscreen()
-      .then(() => {
-        toggleScreen.href = "javascript:toggleScreen(0)";
-        toggleScreen.innerHTML =
-          "<img src='./assest/fullScreen.svg' alt='FullScreen' />";
-      })
-      .catch((e) => {
-        alert(e);
-      });
-  }
-}
 
 function toggleMenu(show) {
-  let menu = document.getElementById("overlay_menu");
+  let nav = document.getElementById("nav_menu");
+  let con = document.getElementById("nav_header");
+  let items = document.getElementsByClassName("menu_item");
+  let itemsCon = document.getElementById("nav_itemCon");
+
   if (show) {
-    menu.style.opacity = "1";
-    menu.style.width = "100%";
     document.body.style.overflow = "hidden";
+    con.style.backgroundColor = "#3aafa9";
+    con.style.height = "100vh";
+    con.style.alignItems = "center";
+    itemsCon.style.display = "flex";
+    nav.href = "javascript:toggleMenu(false)";
+    nav.innerHTML = "<img src='./asset/close.svg' alt='menu' />";
+    Array.from(items).forEach((item) => {
+      item.style.display = "block";
+    });
   } else {
-    menu.style.opacity = "0";
-    menu.style.width = "0%";
-    document.body.style.overflow = "scroll";
+    document.body.style.overflow = "auto";
+    con.style.alignItems = "unset";
+    itemsCon.style.display = "none";
+    con.style.backgroundColor = "#7d848b";
+    con.style.height = "60px";
+    nav.href = "javascript:toggleMenu(true)";
+    nav.innerHTML = "<img src='./asset/menu.svg' alt='menu' />";
+    Array.from(items).forEach((item) => {
+      item.style.display = "none";
+    });
   }
 }
